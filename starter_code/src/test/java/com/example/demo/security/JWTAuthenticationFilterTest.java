@@ -3,6 +3,7 @@ package com.example.demo.security;
 import com.example.demo.model.persistence.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -27,6 +28,8 @@ class JWTAuthenticationFilterTest {
         filter = new JWTAuthenticationFilter(authManager);
     }
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testAttemptAuthentication() throws Exception {
         User user = new User();

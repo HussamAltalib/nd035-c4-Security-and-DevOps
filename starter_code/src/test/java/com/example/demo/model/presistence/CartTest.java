@@ -2,6 +2,7 @@ package com.example.demo.model.presistence;
 
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.Item;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -10,6 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CartTest {
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testAddAndRemoveItem() {
         Cart cart = new Cart();

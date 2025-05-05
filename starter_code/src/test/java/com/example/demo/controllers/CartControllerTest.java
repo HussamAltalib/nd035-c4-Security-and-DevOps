@@ -4,6 +4,7 @@ import com.example.demo.model.persistence.*;
 import com.example.demo.model.persistence.repositories.*;
 import com.example.demo.model.requests.ModifyCartRequest;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
 import org.springframework.http.ResponseEntity;
@@ -46,6 +47,8 @@ class CartControllerTest {
         item.setPrice(BigDecimal.TEN);
     }
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testAddToCart_happyPath() {
         ModifyCartRequest request = new ModifyCartRequest();
@@ -62,6 +65,7 @@ class CartControllerTest {
         assertEquals(1, response.getBody().getItems().size());
     }
 
+    @Tag("negative")
     @Test
     void testAddToCart_userNotFound() {
         ModifyCartRequest request = new ModifyCartRequest();
@@ -74,6 +78,7 @@ class CartControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    @Tag("negative")
     @Test
     void testAddToCart_itemNotFound() {
         ModifyCartRequest request = new ModifyCartRequest();
@@ -88,6 +93,7 @@ class CartControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    @Tag("negative")
     @Test
     void testRemoveFromCart_userNotFound() {
         ModifyCartRequest request = new ModifyCartRequest();
@@ -99,6 +105,7 @@ class CartControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    @Tag("negative")
     @Test
     void testRemoveFromCart_itemNotFound() {
         ModifyCartRequest request = new ModifyCartRequest();

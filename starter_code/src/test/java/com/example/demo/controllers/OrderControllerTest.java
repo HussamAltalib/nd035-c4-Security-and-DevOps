@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.model.persistence.*;
 import com.example.demo.model.persistence.repositories.*;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,8 @@ class OrderControllerTest {
         user.setCart(new Cart());
     }
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testSubmitOrder_happyPath() {
         when(userRepository.findByUsername("john")).thenReturn(user);
@@ -43,6 +46,7 @@ class OrderControllerTest {
         verify(orderRepository, times(1)).save(any(UserOrder.class));
     }
 
+    @Tag("negative")
     @Test
     void testSubmitOrder_userNotFound() {
         when(userRepository.findByUsername("unknown")).thenReturn(null);
@@ -52,6 +56,7 @@ class OrderControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    @Tag("negative")
     @Test
     void testGetOrdersForUser_happyPath() {
         when(userRepository.findByUsername("john")).thenReturn(user);
@@ -63,6 +68,7 @@ class OrderControllerTest {
         assertFalse(response.getBody().isEmpty());
     }
 
+    @Tag("negative")
     @Test
     void testGetOrdersForUser_userNotFound() {
         when(userRepository.findByUsername("unknown")).thenReturn(null);

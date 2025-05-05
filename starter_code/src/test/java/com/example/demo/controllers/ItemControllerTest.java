@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.model.persistence.Item;
 import com.example.demo.model.persistence.repositories.ItemRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +36,8 @@ class ItemControllerTest {
         item.setDescription("Test item");
     }
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testGetItems() {
         when(itemRepository.findAll()).thenReturn(List.of(item));
@@ -45,6 +48,7 @@ class ItemControllerTest {
         assertFalse(response.getBody().isEmpty());
     }
 
+    @Tag("sanity")
     @Test
     void testGetItemById_found() {
         when(itemRepository.findById(1L)).thenReturn(Optional.of(item));
@@ -55,6 +59,7 @@ class ItemControllerTest {
         assertEquals(item, response.getBody());
     }
 
+    @Tag("negative")
     @Test
     void testGetItemById_notFound() {
         when(itemRepository.findById(2L)).thenReturn(Optional.empty());
@@ -64,6 +69,7 @@ class ItemControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    @Tag("sanity")
     @Test
     void testGetItemsByName_found() {
         when(itemRepository.findByName("Widget")).thenReturn(List.of(item));
@@ -74,6 +80,7 @@ class ItemControllerTest {
         assertFalse(response.getBody().isEmpty());
     }
 
+    @Tag("negative")
     @Test
     void testGetItemsByName_notFound() {
         when(itemRepository.findByName("Nonexistent")).thenReturn(List.of());

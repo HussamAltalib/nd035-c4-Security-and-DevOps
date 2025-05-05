@@ -4,6 +4,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -35,6 +36,8 @@ class JWTAuthenticationVerificationFilterTest {
         filter = new JWTAuthenticationVerficationFilter(authManager);
     }
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testDoFilterInternal_withValidToken() throws Exception {
         String token = "Bearer " + com.auth0.jwt.JWT.create()
@@ -49,6 +52,7 @@ class JWTAuthenticationVerificationFilterTest {
         verify(chain, times(1)).doFilter(request, response);
     }
 
+    @Tag("negative")
     @Test
     void testDoFilterInternal_withNoToken() throws Exception {
         when(request.getHeader(SecurityConstants.HEADER_STRING)).thenReturn(null);

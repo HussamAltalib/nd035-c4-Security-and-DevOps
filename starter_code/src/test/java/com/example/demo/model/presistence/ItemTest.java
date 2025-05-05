@@ -1,12 +1,15 @@
 package com.example.demo.model.presistence;
 
 import com.example.demo.model.persistence.Item;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ItemTest {
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testEqualsAndHashCode() {
         Item item1 = new Item();

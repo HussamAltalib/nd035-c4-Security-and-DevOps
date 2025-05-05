@@ -3,11 +3,14 @@ package com.example.demo.model.presistence;
 
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 
+    @Tag("sanity")
+    @Tag("regression")
     @Test
     void testGettersAndSetters() {
         User user = new User();
