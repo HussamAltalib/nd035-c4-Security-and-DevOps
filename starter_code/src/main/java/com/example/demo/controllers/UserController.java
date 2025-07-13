@@ -61,4 +61,10 @@ public class UserController {
 		return ResponseEntity.ok(user);
 	}
 
+	@GetMapping("/api/force-exception")
+	public String forceError() {
+		throw new RuntimeException("Simulated exception for Splunk logging test");
+	}
+
+
 }

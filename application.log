@@ -1,0 +1,53 @@
+2025-07-13T17:53:15.722+03:00  INFO 22129 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication using Java 21.0.4 with PID 22129 (/Users/7ossam/Documents/JavaNanodegree/course4/nd035-c4-Security-and-DevOps/starter_code/target/classes started by 7ossam in /Users/7ossam/Documents/JavaNanodegree/course4/nd035-c4-Security-and-DevOps)
+2025-07-13T17:53:15.730+03:00  INFO 22129 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-13T17:53:16.018+03:00  INFO 22129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13T17:53:16.044+03:00  INFO 22129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2025-07-13T17:53:16.439+03:00  INFO 22129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-13T17:53:16.449+03:00  INFO 22129 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-13T17:53:16.450+03:00  INFO 22129 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-07-13T17:53:16.492+03:00  INFO 22129 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-13T17:53:16.493+03:00  INFO 22129 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 731 ms
+2025-07-13T17:53:16.513+03:00  INFO 22129 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-13T17:53:16.599+03:00  INFO 22129 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bootapp user=SA
+2025-07-13T17:53:16.600+03:00  INFO 22129 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-13T17:53:16.606+03:00  INFO 22129 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2025-07-13T17:53:16.655+03:00  INFO 22129 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13T17:53:16.706+03:00  INFO 22129 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-07-13T17:53:16.735+03:00  INFO 22129 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-13T17:53:16.887+03:00  INFO 22129 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13T17:53:16.916+03:00  WARN 22129 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13T17:53:17.380+03:00  INFO 22129 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13T17:53:17.404+03:00  INFO 22129 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13T17:53:17.556+03:00  INFO 22129 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-07-13T17:53:17.618+03:00  WARN 22129 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13T17:53:17.836+03:00  INFO 22129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-13T17:53:17.843+03:00  INFO 22129 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 2.419 seconds (process running for 2.719)
+2025-07-13T17:53:25.284+03:00  INFO 22129 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13T17:53:25.287+03:00  INFO 22129 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-13T17:53:25.289+03:00  INFO 22129 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-13T17:53:37.380+03:00  INFO 22153 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests using Java 21.0.4 with PID 22153 (started by 7ossam in /Users/7ossam/Documents/JavaNanodegree/course4/nd035-c4-Security-and-DevOps/starter_code)
+2025-07-13T17:53:37.382+03:00  INFO 22153 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-07-13T17:53:37.748+03:00  INFO 22153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13T17:53:37.779+03:00  INFO 22153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-07-13T17:53:38.252+03:00  INFO 22153 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13T17:53:38.310+03:00  INFO 22153 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-07-13T17:53:38.340+03:00  INFO 22153 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-13T17:53:38.575+03:00  INFO 22153 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13T17:53:38.599+03:00  INFO 22153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-13T17:53:38.817+03:00  INFO 22153 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bootapp user=SA
+2025-07-13T17:53:38.818+03:00  INFO 22153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-13T17:53:38.842+03:00  WARN 22153 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13T17:53:39.591+03:00  INFO 22153 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13T17:53:39.645+03:00  INFO 22153 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13T17:53:39.925+03:00  INFO 22153 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-07-13T17:53:39.942+03:00  WARN 22153 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13T17:53:40.313+03:00  INFO 22153 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2025-07-13T17:53:40.354+03:00  INFO 22153 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 3.21 seconds (process running for 4.075)
+2025-07-13T17:53:41.653+03:00  INFO 22153 --- [main] c.e.demo.controllers.UserController      : User created successfully: testuser
+2025-07-13T17:53:41.659+03:00  WARN 22153 --- [main] c.e.demo.controllers.UserController      : Failed to create user: password requirements not met for username testuser
+2025-07-13T17:53:41.666+03:00  WARN 22153 --- [main] c.e.demo.controllers.UserController      : Failed to create user: password requirements not met for username testuser
+2025-07-13T17:53:41.858+03:00  WARN 22153 --- [main] c.e.demo.controllers.UserController      : Order submission failed: user unknown not found
+2025-07-13T17:53:41.866+03:00  INFO 22153 --- [main] c.e.demo.controllers.UserController      : Order submitted successfully for user john
+2025-07-13T17:53:41.922+03:00  INFO 22153 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13T17:53:41.927+03:00  INFO 22153 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-13T17:53:42.066+03:00  INFO 22153 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
